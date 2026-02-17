@@ -8,13 +8,64 @@
 
     <h2>Photo Editor</h2>
 
-    <input type="file" id="upload">
-
-    <br><br>
+    <input type="file" id="upload"><br><br>
 
     <canvas id="canvas"></canvas>
 
+
+    <label>Brightness</label>
+    <input type="range" id="brightness" min="0" max="200" value="100">
+    <span id="brightnessValue">100</span>%
+
+    <label>Saturation</label>
+    <input type="range" id="saturation" min="0" max="200" value="100">
+    <span id="saturationValue">100</span>%
+
+    <br><br>
+
+    <input type="range" id="inversion" min="0" max="100" value="0">
+    <label>Inversion</label>
+    
+    <span id="inversionValue">0</span>%
+    
+    <br><br>
+    <label>Grayscale</label>
+    <input type="range" id="grayscale" min="0" max="100" value="0">
+    <span id="grayscaleValue">0</span>%
+    
+    <br><br>
+    
+    <label>Sepia</label>
+    <input type="range" id="sepia" min="0" max="100" value="0">
+    <span id="sepiaValue">0</span>%
+    
+    <br><br>
+    
+    <label>Blur</label>
+    <input type="range" id="blur" min="0" max="10" value="0">
+    <span id="blurValue">0</span>px
+    
+    <br><br>
+    
+    <label>Rotate</label>
+    <input type="range" id="rotate" min="0" max="360" value="0">
+    <span id="rotateValue">0</span>°
+    
+    <br><br>
+    
+    <button id="flipH">Flip Horizontal</button>
+    <button id="flipV">Flip Vertical</button>
+    
+    <br><br>
+    
+    <button id="reset">Reset</button>
+    <button id="save">Save Image</button>
+    
+    
+    
     <script src="ascript.js"></script>
+
+    
 
 </body>
 </html>
