@@ -2,70 +2,89 @@
 <html>
 <head>
     <title>Photo Editor</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="astyle.css">
 </head>
 <body>
 
+<div class="container">
+
     <h2>Photo Editor</h2>
 
-    <input type="file" id="upload"><br><br>
+    <div class="top-controls">
+        <input type="file" id="upload">
+        <button id="save">Save</button>
+        <button id="reset">Reset</button>
+        <button id="undo">Undo</button>
+        <button id="redo">Redo</button>
+    </div>
 
-    <canvas id="canvas"></canvas>
+    <div class="main">
 
+        <div class="canvas-section">
+            <canvas id="canvas"></canvas>
+        </div>
 
-    <label>Brightness</label>
-    <input type="range" id="brightness" min="0" max="200" value="100">
-    <span id="brightnessValue">100</span>%
+        <div class="controls">
 
-    <label>Saturation</label>
-    <input type="range" id="saturation" min="0" max="200" value="100">
-    <span id="saturationValue">100</span>%
+            <div class="control">
+                <label>Brightness</label>
+                <input type="range" id="brightness" min="0" max="200" value="100">
+                <span id="brightnessValue">100</span>%
+            </div>
 
-    <br><br>
+            <div class="control">
+                <label>Saturation</label>
+                <input type="range" id="saturation" min="0" max="200" value="100">
+                <span id="saturationValue">100</span>%
+            </div>
 
-    <input type="range" id="inversion" min="0" max="100" value="0">
-    <label>Inversion</label>
-    
-    <span id="inversionValue">0</span>%
-    
-    <br><br>
-    <label>Grayscale</label>
-    <input type="range" id="grayscale" min="0" max="100" value="0">
-    <span id="grayscaleValue">0</span>%
-    
-    <br><br>
-    
-    <label>Sepia</label>
-    <input type="range" id="sepia" min="0" max="100" value="0">
-    <span id="sepiaValue">0</span>%
-    
-    <br><br>
-    
-    <label>Blur</label>
-    <input type="range" id="blur" min="0" max="10" value="0">
-    <span id="blurValue">0</span>px
-    
-    <br><br>
-    
-    <label>Rotate</label>
-    <input type="range" id="rotate" min="0" max="360" value="0">
-    <span id="rotateValue">0</span>°
-    
-    <br><br>
-    
-    <button id="flipH">Flip Horizontal</button>
-    <button id="flipV">Flip Vertical</button>
-    
-    <br><br>
-    
-    <button id="reset">Reset</button>
-    <button id="save">Save Image</button>
-    
-    
-    
-    <script src="ascript.js"></script>
+            <div class="control">
+                <label>Inversion</label>
+                <input type="range" id="inversion" min="0" max="100" value="0">
+                <span id="inversionValue">0</span>%
+            </div>
 
-    
+            <div class="control">
+                <label>Grayscale</label>
+                <input type="range" id="grayscale" min="0" max="100" value="0">
+                <span id="grayscaleValue">0</span>%
+            </div>
+
+            <div class="control">
+                <label>Sepia</label>
+                <input type="range" id="sepia" min="0" max="100" value="0">
+                <span id="sepiaValue">0</span>%
+            </div>
+
+            <div class="control">
+                <label>Blur</label>
+                <input type="range" id="blur" min="0" max="10" value="0">
+                <span id="blurValue">0</span>px
+            </div>
+
+            <div class="control">
+                <label>Rotate</label>
+                <input type="range" id="rotate" min="0" max="360" value="0">
+                <span id="rotateValue">0</span>°
+            </div>
+
+            <div class="flip-buttons">
+                <button id="flipH">Flip H</button>
+                <button id="flipV">Flip V</button>
+            </div>
+
+        </div>
+
+        <div class="history-panel">
+            <h3>History</h3>
+            <div id="historyList"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="ascript.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f4f4f4;
+}
+
+.container {
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.top-controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.main {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.canvas-section {
+    flex: 2;
+    text-align: center;
+}
+
+canvas {
+    max-width: 100%;
+    border: 2px solid #333;
+    background: white;
+}
+
+.controls {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+}
+
+.control {
+    margin-bottom: 15px;
+}
+
+.control label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.flip-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.history-panel {
+    flex: 1;
+    background: white;
+    padding: 15px;
+    border-radius: 6px;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.history-panel h3 {
+    margin-top: 0;
+}
+
+.history-item {
+    padding: 6px;
+    margin-bottom: 5px;
+    background: #eaeaea;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.history-item.active {
+    background: #bcd7ff;
+}
+
+button {
+    padding: 6px 10px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column;
+    }
+}
